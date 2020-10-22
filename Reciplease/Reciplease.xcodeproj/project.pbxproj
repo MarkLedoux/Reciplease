@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		6E6A49F5252B38A000BB1CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6A49F3252B38A000BB1CDC /* LaunchScreen.storyboard */; };
 		6E6A4A00252B38A100BB1CDC /* RecipleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A49FF252B38A100BB1CDC /* RecipleaseTests.swift */; };
 		6E6A4A0B252B38A100BB1CDC /* RecipleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A4A0A252B38A100BB1CDC /* RecipleaseUITests.swift */; };
+		6E6A4A1D252B3B7100BB1CDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6E6A4A1C252B3B7100BB1CDC /* Alamofire */; };
+		6E6A4A2C252B3ECF00BB1CDC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A4A2B252B3ECF00BB1CDC /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		6E6A4A06252B38A100BB1CDC /* RecipleaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6A4A0A252B38A100BB1CDC /* RecipleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITests.swift; sourceTree = "<group>"; };
 		6E6A4A0C252B38A100BB1CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6A4A2B252B3ECF00BB1CDC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6A4A1D252B3B7100BB1CDC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 				6E6A49F1252B38A000BB1CDC /* Assets.xcassets */,
 				6E6A49F3252B38A000BB1CDC /* LaunchScreen.storyboard */,
 				6E6A49F6252B38A000BB1CDC /* Info.plist */,
+				6E6A4A30252B3ED700BB1CDC /* DataModel */,
 			);
 			path = Reciplease;
 			sourceTree = "<group>";
@@ -128,6 +133,14 @@
 			path = RecipleaseUITests;
 			sourceTree = "<group>";
 		};
+		6E6A4A30252B3ED700BB1CDC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				6E6A4A2B252B3ECF00BB1CDC /* DataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,12 +151,16 @@
 				6E6A49E1252B389D00BB1CDC /* Sources */,
 				6E6A49E2252B389D00BB1CDC /* Frameworks */,
 				6E6A49E3252B389D00BB1CDC /* Resources */,
+				6E6A4A23252B3E4100BB1CDC /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Reciplease;
+			packageProductDependencies = (
+				6E6A4A1C252B3B7100BB1CDC /* Alamofire */,
+			);
 			productName = Reciplease;
 			productReference = 6E6A49E5252B389D00BB1CDC /* Reciplease.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 6E6A49DC252B389D00BB1CDC;
+			packageReferences = (
+				6E6A4A1B252B3B7100BB1CDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 6E6A49E6252B389D00BB1CDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,12 +273,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E6A4A23252B3E4100BB1CDC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E6A49E1252B389D00BB1CDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6E6A49ED252B389D00BB1CDC /* ViewController.swift in Sources */,
+				6E6A4A2C252B3ECF00BB1CDC /* DataModel.swift in Sources */,
 				6E6A49E9252B389D00BB1CDC /* AppDelegate.swift in Sources */,
 				6E6A49EB252B389D00BB1CDC /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +634,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E6A4A1B252B3B7100BB1CDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E6A4A1C252B3B7100BB1CDC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E6A4A1B252B3B7100BB1CDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E6A49DD252B389D00BB1CDC /* Project object */;
 }
