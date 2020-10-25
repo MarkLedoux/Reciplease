@@ -44,7 +44,7 @@
 		6E6A49EF252B389D00BB1CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E6A49F1252B38A000BB1CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E6A49F4252B38A000BB1CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6E6A49F6252B38A000BB1CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6A49F6252B38A000BB1CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/vinceled/Documents/Reciplease/Reciplease/Supporting Files/Info.plist"; sourceTree = "<absolute>"; };
 		6E6A49FB252B38A000BB1CDC /* RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6A49FF252B38A100BB1CDC /* RecipleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseTests.swift; sourceTree = "<group>"; };
 		6E6A4A01252B38A100BB1CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,10 +80,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E2A9E0225460F6800A61B24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E6A49EE252B389D00BB1CDC /* Main.storyboard */,
+				6E6A49F3252B38A000BB1CDC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E2A9E0325460F8D00A61B24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E6A49E8252B389D00BB1CDC /* AppDelegate.swift */,
+				6E6A49EA252B389D00BB1CDC /* SceneDelegate.swift */,
+				6E6A49F1252B38A000BB1CDC /* Assets.xcassets */,
+				6E6A49F6252B38A000BB1CDC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E2A9E0725460FA100A61B24 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6E6A49EC252B389D00BB1CDC /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		6E6A49DC252B389D00BB1CDC = {
 			isa = PBXGroup;
 			children = (
-				6E6A49E7252B389D00BB1CDC /* Reciplease */,
+				6E6A4A30252B3ED700BB1CDC /* DataModel */,
+				6E2A9E0225460F6800A61B24 /* View */,
+				6E2A9E0725460FA100A61B24 /* ViewController */,
+				6E2A9E0325460F8D00A61B24 /* Supporting Files */,
 				6E6A49FE252B38A000BB1CDC /* RecipleaseTests */,
 				6E6A4A09252B38A100BB1CDC /* RecipleaseUITests */,
 				6E6A49E6252B389D00BB1CDC /* Products */,
@@ -98,21 +129,6 @@
 				6E6A4A06252B38A100BB1CDC /* RecipleaseUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6E6A49E7252B389D00BB1CDC /* Reciplease */ = {
-			isa = PBXGroup;
-			children = (
-				6E6A49E8252B389D00BB1CDC /* AppDelegate.swift */,
-				6E6A49EA252B389D00BB1CDC /* SceneDelegate.swift */,
-				6E6A49EC252B389D00BB1CDC /* ViewController.swift */,
-				6E6A49EE252B389D00BB1CDC /* Main.storyboard */,
-				6E6A49F1252B38A000BB1CDC /* Assets.xcassets */,
-				6E6A49F3252B38A000BB1CDC /* LaunchScreen.storyboard */,
-				6E6A49F6252B38A000BB1CDC /* Info.plist */,
-				6E6A4A30252B3ED700BB1CDC /* DataModel */,
-			);
-			path = Reciplease;
 			sourceTree = "<group>";
 		};
 		6E6A49FE252B38A000BB1CDC /* RecipleaseTests */ = {
@@ -479,7 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6369QJ9JH;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "/Users/vinceled/Documents/Reciplease/Reciplease/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6369QJ9JH;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "/Users/vinceled/Documents/Reciplease/Reciplease/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
